@@ -26,7 +26,6 @@ public class LoginController {
 	
 	@Autowired
 	private LoginformRepo loginformRepo;
-	 @CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/signup")
 	
 	public ResponseEntity<?> signMapping(@RequestBody LoginForm loginform){
@@ -40,9 +39,7 @@ public class LoginController {
 	        }
 	}
 
-	@PostMapping("/login")
-	@CrossOrigin(origins = "http://localhost:3000")
-	
+	@PostMapping("/login")	
 	public ResponseEntity<?> loginMapping(@RequestBody LoginForm loginform){
 		
 		System.out.println(loginform.getUsername());

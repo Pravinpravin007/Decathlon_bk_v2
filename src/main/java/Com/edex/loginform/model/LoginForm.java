@@ -1,6 +1,7 @@
 package Com.edex.loginform.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Table(name="logindetail")
@@ -8,6 +9,7 @@ import jakarta.persistence.Table;
 
 public class LoginForm {
 	@Id
+	@GeneratedValue
 	private int id;
 	private String username;
 	private String email;

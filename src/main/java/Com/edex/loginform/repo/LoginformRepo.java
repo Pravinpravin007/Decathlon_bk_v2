@@ -12,14 +12,7 @@ import Com.edex.loginform.model.LoginForm;
 
 @Repository
 public interface LoginformRepo extends JpaRepository<LoginForm, Integer>{
-
-//	
-//	@Query(value = "SELECT * FROM LOGIN WHERE email == : email", nativeQuery = true)
-//
-//	List<Login>findByeEmail(String email);
-//	
-	
-	
+		
 	@Query(value = "Select * from logindetail Where username = :username AND password = :password", nativeQuery = true)
 	LoginForm findBy(String username, String password);
 	
